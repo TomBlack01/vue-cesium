@@ -242,8 +242,8 @@ export default {
           container: geocoderContainer,
           geocoderServices: Cesium.defined(this.geocoder)
             ? Cesium.isArray(this.geocoder)
-                ? this.geocoder
-                : [this.geocoder]
+              ? this.geocoder
+              : [this.geocoder]
             : undefined,
           scene: viewer.scene,
           viewer: viewer
@@ -697,10 +697,10 @@ Either specify options.terrainProvider instead or set options.baseLayerPicker to
         terrainProviderViewModels,
         imageryProvider: this.isEmptyObj(imageryProvider)
           ? Cesium.defined(Cesium.TileMapServiceImageryProvider)
-              ? new Cesium.TileMapServiceImageryProvider({
-                  url: url
-                })
-              : Cesium.createTileMapServiceImageryProvider({ url: url })
+            ? new Cesium.TileMapServiceImageryProvider({
+              url: url
+            })
+            : Cesium.createTileMapServiceImageryProvider({ url: url })
           : imageryProvider,
         terrainProvider,
         skyBox,
